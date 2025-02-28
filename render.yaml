@@ -1,0 +1,11 @@
+version: 1
+services:
+  - type: web
+    name: youtube-downloader
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: PORT
+        value: "5000"
